@@ -1,0 +1,188 @@
+<h1 class="mt-3">Pipes <small>Angular</small></h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Variable</th>
+          <th>Pipe </th>
+          <th>Salida</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr>
+          <td>{{nombre2}}</td>
+          <td> capitalizado </td>
+          <td>{{nombre2 | capitalizado}}</td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td> uppercase </td>
+          <td>{{nombre | uppercase}}</td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td> lowercase </td>
+          <td>{{nombre | lowercase}}</td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td> slice:3 </td>
+          <td>{{nombre | slice:3}}</td>
+        </tr>
+        <tr>
+          <td>{{nombre}}</td>
+          <td> slice:0:3 </td>
+          <td>{{nombre | slice:0:3}}</td>
+        </tr>
+        <tr>
+          <td>{{arreglo}}</td>
+          <td> slice:4 </td>
+          <td>{{arreglo | slice:4}}</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td> number </td>
+          <td>{{PI | number}}</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td> number:'1.0-0' </td>
+          <td>{{PI | number:'1.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td> number:'3.0-0' </td>
+          <td>{{PI | number:'3.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td> number:'.0-2' </td>
+          <td>{{PI | number:'.0-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td> percent </td>
+          <td>{{porcentaje | percent}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td> percent:'2.2-2' </td>
+          <td>{{porcentaje | percent:'2.2-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td> percent:'2.2-2' </td>
+          <td>{{porcentaje | percent:'3.2-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td> currency </td>
+          <td>{{salario | currency}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td> currency:'EUR' </td>
+          <td>{{salario | currency:'EUR'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td> currency:'CAD':'symbol-narrow' </td>
+          <td>{{salario | currency:'CAD':'symbol'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td> currency:'CAD':'symbol':'.0-0' </td>
+          <td>{{salario | currency:'CAD':'symbol':'.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{valorPromesa}}</td>
+          <td> async </td>
+          <td>{{valorPromesa | async}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> date </td>
+          <td>{{fecha}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> date:'medium' </td>
+          <td>{{fecha | date:'medium'}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> date:'short' </td>
+          <td>{{fecha | date:'short'}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td> date:'MMMM-dd' </td>
+          <td>{{fecha | date:'MMMM-dd'}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>  date:'MMMM-dd':'':'en' </td>
+          <td>{{fecha | date:'MMMM-dd':'':'en'}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>  date:'MMMM-dd':'':'fr' </td>
+          <td>{{fecha | date:'MMMM-dd':'':'fr'}}</td>
+        </tr>
+        <tr>
+          <td>{{fecha}}</td>
+          <td>  date:'MMMM-dd':'':'{{idioma}}' 
+              <br>
+              <!-- <button class="mr-1 btn btn-primary" (click)="setIdioma('es')">Español</button>
+              <button class="mr-1 btn btn-secondary" (click)="setIdioma('en')">Inglés</button>
+              <button class="mr-1 btn btn-success" (click)="setIdioma('fr')">Francés</button>
+                 -->
+              <!-- esto es lo mismo que lo de arriba solo que sin uyilizar la funcion  -->
+              <button class="mr-1 btn btn-primary"   (click)="idioma='es'">Español</button>
+              <button class="mr-1 btn btn-secondary" (click)="idioma='en'">Inglés</button>
+              <button class="mr-1 btn btn-success"   (click)="idioma='fr'">Francés</button>
+          </td>
+          <td>{{fecha | date:'MMMM-dd':'':idioma}}</td>
+        </tr>
+
+        <tr>
+          <td>{{nombre}}</td>
+          <td>  contrasena:{{activar}}
+            <br>
+            <button class="mr-1 btn btn-primary" (click)="activar = !activar">Activar/Desactivar</button>
+          </td>
+          <td>{{nombre | contrasena:activar }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<h3>JSON</h3>
+<hr>
+<div class="row mb-5">
+  <pre>
+   <div class="col">
+    {{heroe | json }}
+   </div>
+  </pre>  
+</div>
+
+<h3 class="mt-4">Domseguro</h3>
+<hr>
+
+<div class="row mb-5"> 
+  <div class="col">
+    <iframe width="560" 
+            height="315"  
+            [src]="videoUrl | domseguro"  
+            frameborder="0"   
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
