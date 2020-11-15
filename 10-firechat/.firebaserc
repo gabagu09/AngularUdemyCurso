@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firechat-eada3": {
+      "hosting": {
+        "firechat": [
+          "firechat-eada3"
+        ]
+      }
+    }
+  }
+}

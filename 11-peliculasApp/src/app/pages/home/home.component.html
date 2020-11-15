@@ -1,0 +1,15 @@
+<h1>Cartelera</h1>
+
+<div class="row" *ngIf="peliculasSlideShow.length > 0">
+    <div class="col">
+        <!-- le paso mis peliculas del home a peliculas del slideshow -->
+        <app-slideshow [peliculas]="peliculasSlideShow"></app-slideshow>
+    </div>
+</div>
+
+<h1>Peliculas</h1>
+
+<app-peliculas-poster-grid *ngIf="peliculas.length > 0"
+                            [peliculas]="peliculas">
+</app-peliculas-poster-grid>
+    

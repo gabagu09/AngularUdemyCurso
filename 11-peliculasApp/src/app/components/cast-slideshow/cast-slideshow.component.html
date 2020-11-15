@@ -1,0 +1,11 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div  *ngFor="let cast of casting"
+            class="swiper-slide text-white text-center">
+            <img [src]="cast.profile_path | poster" 
+                 [alt]="cast.name"
+                 class="img-thumbnail">
+            {{ cast.name }}
+        </div>
+    </div>
+</div>

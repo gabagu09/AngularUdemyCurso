@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-fotos-c1ee1": {
+      "hosting": {
+        "fotosFirebase": [
+          "fir-fotos-c1ee1"
+        ]
+      }
+    }
+  }
+}
